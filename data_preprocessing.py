@@ -9,7 +9,7 @@ def seq_data_preprocessing(data):
     return data
 
 def split_sequence_train_test(data, test_size, seq_len, batch_size, input_cols, target_cols, groupby_col='profile_id', random_state=42):
-    data_grpd = {pid: df_ for pid, df_ in df.groupby(groupby_col)}
+    data_grpd = {pid: df_ for pid, df_ in data.groupby(groupby_col)}
 
     sequential_data = []
 
