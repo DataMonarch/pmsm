@@ -1,6 +1,7 @@
 import pandas as pd
 from data_preprocessing import seq_data_preprocessing, split_sequence_train_test
 from cnn_builder import cnn_model_builder
+from visualizer import train_test_visualizer
 
 target_features = ['motor_speed', 'torque', 'stator_yoke', 'stator_tooth', 'stator_winding']
 input_features = ['u_q', 'u_d', 'i_q', 'i_d', 'coolant', 'ambient']
@@ -31,3 +32,5 @@ model_es_callback = tf.keras.callbacks.EarlyStopping(
 
 history = cnn_model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=0.2, callbacks=[model_es_callback])
 training_history.append(history)
+
+train_test_visualizer(X_test, y_test, training_history[-1], 3)
