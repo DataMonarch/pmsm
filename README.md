@@ -1,4 +1,8 @@
+#Permanent Magnet Synchronous Motor (PMSM)
+
 The heat loss and cooling modes of a permanent magnet synchronous motor (PMSM) directly affect its temperature rise. The accurate evaluation and prediction of stator winding temperature is of great significance to the safety and reliability of PMSMs. ([Article: Predicting Temperature of Permanent Magnet
+
+
 Synchronous Motor Based on Deep Neural Network](https://www.researchgate.net/publication/344972500_Predicting_Temperature_of_Permanent_Magnet_Synchronous_Motor_Based_on_Deep_Neural_Network))
 
 This dataset provides readings from several sensors fitted to monitor the main two pieces of PMSMs, namely the **stator** and the **rotor**. Below image showcases the components under consideration.
