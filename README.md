@@ -3,7 +3,7 @@ Synchronous Motor Based on Deep Neural Network](https://www.researchgate.net/pub
 
 This dataset provides readings from several sensors fitted to monitor the main two pieces of PMSMs, namely the **stator** and the **rotor**. Below image showcases the components under consideration.
 
-![image.png](roto_stator.png)
+![rotor_stator](rotor_stator.png)
 
 Generally, due to presence of moving parts working under various states of the motor speed and torque (a point at the motor speed x torque plain) thermal losses will be generated which impact the equipment in the long run shortening its lifespan. The copper loss of a permanent magnet motor stator directly affects the heating degree of the stator winding.
 
