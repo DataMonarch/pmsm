@@ -1,4 +1,4 @@
-#Permanent Magnet Synchronous Motor (PMSM)
+# Permanent Magnet Synchronous Motor (PMSM)
 
 The heat loss and cooling modes of a permanent magnet synchronous motor (PMSM) directly affect its temperature rise. The accurate evaluation and prediction of stator winding temperature is of great significance to the safety and reliability of PMSMs. ([Article: Predicting Temperature of Permanent Magnet
 
