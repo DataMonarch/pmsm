@@ -1,0 +1,1 @@
+<iframe src="https://www.kaggle.com/embed/toghrultahirov/eda-and-first-look?cellIds=2&kernelSessionId=85736351" height="300" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="EDA and first look"></iframe>
