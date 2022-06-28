@@ -1,9 +1,6 @@
 # Permanent Magnet Synchronous Motor (PMSM)
 
-The heat loss and cooling modes of a permanent magnet synchronous motor (PMSM) directly affect its temperature rise. The accurate evaluation and prediction of stator winding temperature is of great significance to the safety and reliability of PMSMs. ([Article: Predicting Temperature of Permanent Magnet
-
-
-Synchronous Motor Based on Deep Neural Network](https://www.researchgate.net/publication/344972500_Predicting_Temperature_of_Permanent_Magnet_Synchronous_Motor_Based_on_Deep_Neural_Network))
+The heat loss and cooling modes of a permanent magnet synchronous motor (PMSM) directly affect its temperature rise. The accurate evaluation and prediction of stator winding temperature is of great significance to the safety and reliability of PMSMs. (
 
 This dataset provides readings from several sensors fitted to monitor the main two pieces of PMSMs, namely the **stator** and the **rotor**. Below image showcases the components under consideration.
 
@@ -28,3 +25,44 @@ Below is a simple description of the data from the sensors mentioned above:
 * " **profile_id** ": id of the measurement session
 
 Ps. all the data point are recorded in 2Hz (one row per 0.5 seconds)
+
+## Training Stage
+
+In this notebook I have built a **1D Convolutional Neural Networks (CNN) based Deep Learning architecture** which **predicts the following 5 target features**:
+* Predicted Stator Readings
+    * Stator tooth temperature (stator_tooth)
+    * Stator winding temperature (stator_winding)
+    * Stator yoke temperature (stator_yoke)
+    
+* Predicted Rotor Readings
+    * Motor Speed (motor speed)
+    * Torque (torque)
+    
+The model which accepts the following as the **input features**:
+* Voltage q-component (u_q)
+* Voltage d-component (u_d)
+* Current d-component (i_q)
+* Current q-component (i_d)
+* Coolant temperature (coolant)
+* Ambient temperature (ambient)
+
+Below you can see a representation of the training
+
+![Training Stage MSE](training_visualized.png)
+
+## Testing Stage
+
+The testing was conducted on an unseen part of the dataset. You can see a **cross-plot of actual values vs the predicted values**.
+
+![Training Stage MSE](testing_stage.png)
+
+## Developing
+
+To clone this project and build your awesome next-gen solution based on it:
+
+```shell
+git clone https://github.com/DataMonarch/pmsm
+```
+
+## References
+* Article: Predicting Temperature of Permanent Magnet Synchronous Motor Based on Deep Neural Network (https://www.researchgate.net/publication/344972500_Predicting_Temperature_of_Permanent_Magnet_Synchronous_Motor_Based_on_Deep_Neural_Network)
